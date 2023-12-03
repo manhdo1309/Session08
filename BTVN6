@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main(){
+	int n;
+	printf("Nhap vao so phan tu cua mang n: ");
+	scanf("%d", &n);
+	int oldNumbers[n];
+	int size = sizeof(oldNumbers) / sizeof(int);
+	for(int i = 0; i < size; i++)
+	{
+		printf("oldnumbers[%d] = ", i);
+		scanf("%d", &oldNumbers[i]);
+	}
+	int deleteIndex;
+	printf("Nhap vao chi so deleteIndex: ");
+	scanf("%d", &deleteIndex);
+	int newNumbers[n - 1];
+	for(int i = 0; i < deleteIndex - 1; i++)
+	{
+		newNumbers[i] = oldNumbers[i];
+		printf("%d\n", newNumbers[i]);
+	}
+	for(int i = deleteIndex + 1; i < size; i++)
+	{
+		newNumbers[i] = oldNumbers[i];
+		printf("%d\n", newNumbers[i]);
+	}
+}
